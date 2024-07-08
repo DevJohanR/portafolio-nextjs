@@ -8,20 +8,20 @@ const RecentProjects = () => {
   return (
     <div className="py-20">
       <h1 className="heading">
-        Filtra mis proyectos {" "}
+        Filtra mis proyectos{" "}
         <span className="text-purple">por tecnologías</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 mt-10 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 p-4 mt-10 justify-center">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] group perspective-800 mx-auto"
+            className="lg:min-h-[50rem] h-[30rem] sm:h-[25rem] flex items-center justify-center sm:w-96 w-[75vw] lg:w-[35vw] group perspective-800 mx-auto"
             key={item.id}
           >
             <PinContainer
               title="/ui.aceternity.com"
               href="https://twitter.com/mannupaaji"
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10 transition-transform duration-500 group-hover:rotate-y-6">
+              <div className="relative flex items-center justify-center sm:w-96 w-[75vw] lg:w-[35vw] overflow-hidden h-[55vh] sm:h-[20vh] lg:h-[45vh] mb-10 transition-transform duration-500 group-hover:rotate-y-6">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl transform transition-transform duration-500 group-hover:rotate-y-6"
                   style={{ backgroundColor: "#13162D" }}
@@ -31,7 +31,7 @@ const RecentProjects = () => {
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0 w-full h-full object-cover"
+                  className="z-10 absolute bottom-0 w-full h-full object-cover lg:h-[45vh]" 
                 />
               </div>
 
@@ -80,4 +80,3 @@ const RecentProjects = () => {
 };
 
 export default RecentProjects;
-/* jj */
