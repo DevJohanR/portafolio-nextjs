@@ -11,17 +11,26 @@ const RecentProjects = () => {
         Filtra mis proyectos{" "}
         <span className="text-purple">por tecnologías</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 p-4 mt-10 justify-center">
+      <div className="flex flex-wrap justify-center p-4 mt-10 gap-4">
+        <style jsx>{`
+          @media (min-width: 640px) {
+            .gap-adjustment {
+              margin-bottom: 100px; /* separacion vertical*/
+              margin-left: 20px; /* separacion horizontal*/
+              margin-right: 20px; /* separacion horizontal*/
+            }
+          }
+        `}</style>
         {projects.map((item) => (
           <div
-            className="lg:min-h-[50rem] h-[30rem] sm:h-[25rem] flex items-center justify-center sm:w-96 w-[75vw] lg:w-[35vw] group perspective-800 mx-auto"
+            className="flex flex-col items-center justify-center h-[30rem] sm:h-[25rem] sm:w-96 w-[75vw] lg:w-[35vw] mb-[65px] group perspective-800 gap-adjustment"
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              title="/sitioweb.aqui"
+              href="#"
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[75vw] lg:w-[35vw] overflow-hidden h-[55vh] sm:h-[20vh] lg:h-[45vh] mb-10 transition-transform duration-500 group-hover:rotate-y-6">
+              <div className="relative flex items-center justify-center sm:w-96 w-[75vw] lg:w-[35vw] overflow-hidden h-[55vh] sm:h-[20vh] lg:h-[45vh] transition-transform duration-500 group-hover:rotate-y-6 mb-4">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl transform transition-transform duration-500 group-hover:rotate-y-6"
                   style={{ backgroundColor: "#13162D" }}
@@ -31,7 +40,7 @@ const RecentProjects = () => {
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0 w-full h-full object-cover lg:h-[45vh]" 
+                  className="z-10 absolute bottom-0 w-full h-full object-cover lg:h-[45vh]"
                 />
               </div>
 
@@ -49,7 +58,7 @@ const RecentProjects = () => {
                 {item.des}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
+              <div className="flex items-center justify-between mt-4 mb-2">
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
                     <div
