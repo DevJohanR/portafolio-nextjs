@@ -1,14 +1,13 @@
 import React from 'react';
-import Image from 'next/image';
-import johanImg from '../../public/johan.jpg';
+import { FaReact } from 'react-icons/fa';
 
 const Timeline = () => {
   return (
-    <div className="relative p-20 mt-12 bg-transparent text-white mx-4 md:mx-10 lg:mx-20">
-      <div className="text-3xl font-semibold flex items-center space-x-2 mb-8">
+    <div className="relative px-4 md:px-10 lg:px-20 mt-12 bg-transparent text-white">
+      <div className="text-3xl font-semibold flex items-center justify-center mb-8 text-center flex-col">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
+          className="h-8 w-8 mb-2"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -20,65 +19,67 @@ const Timeline = () => {
             d="M3 6h18M3 12h18m-6 6h6"
           />
         </svg>
-        <span>Experiencia laboral</span>
+        <span>Lorem ipsum</span>
       </div>
-      <div className="relative">
+      <div className="relative flex flex-col items-center">
         <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-700"></div>
 
-        {/* Primera experiencia */}
-        <div className="relative flex items-start mb-12 flex-row-reverse">
-          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-black-900 border-2 border-yellow-500 overflow-hidden z-10 relative left-1/2 transform -translate-x-1/2">
-            <Image src={johanImg} alt="Johan" className="rounded-full object-cover" width={48} height={48} />
+        {/* Experience Item */}
+        {[
+          {
+            title: 'Lorem ipsum',
+            company: 'Lorem ipsum',
+            date: 'Lorem ipsum',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel mauris vel metus elementum malesuada.',
+            linkText: 'Lorem ipsum >',
+            linkHref: '#',
+          },
+          {
+            title: 'Lorem ipsum',
+            company: 'Lorem ipsum',
+            date: 'Lorem ipsum',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel mauris vel metus elementum malesuada.',
+          },
+          {
+            title: 'Lorem ipsum',
+            company: 'Lorem ipsum',
+            date: 'Lorem ipsum',
+            description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel mauris vel metus elementum malesuada.',
+          },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="relative flex items-center w-full max-w-3xl mb-12"
+          >
+            <div className="relative flex flex-col items-center w-full overflow-hidden rounded-lg p-[1px]">
+              <span className="absolute inset-0 animate-spin-slow bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
+              <div className="relative w-full bg-slate-950 rounded-lg p-6 flex flex-col items-center text-center">
+                <FaReact className="text-yellow-500 w-8 h-8 mb-2" />
+                <div className="w-full">
+                  <h3 className="text-lg font-semibold text-yellow-500">
+                    {item.title}
+                  </h3>
+                  <h4 className="text-md text-gray-400">{item.company}</h4>
+                  <p className="text-sm text-gray-500">{item.date}</p>
+                </div>
+                <div className="w-full mt-4">
+                  <p className="text-sm text-gray-300">{item.description}</p>
+                  {item.linkText && (
+                    <a
+                      href={item.linkHref}
+                      className="text-yellow-500 hover:underline mt-2 inline-block"
+                    >
+                      {item.linkText}
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="mr-20 w-1/2 text-right">
-            <h3 className="text-lg font-semibold text-yellow-500">
-              Creador de Contenido
-            </h3>
-            <h4 className="text-md text-gray-400">Twitch</h4>
-            <p className="text-sm text-gray-500">Actualmente...</p>
-            <p className="text-sm text-gray-300 mt-2">
-              Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.
-            </p>
-            <a href="#" className="text-yellow-500 hover:underline mt-2 inline-block">
-              Saber más &gt;
-            </a>
-          </div>
-        </div>
-
-        {/* Segunda experiencia */}
-        <div className="relative flex items-start mb-12">
-          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-black-900 border-2 border-yellow-500 overflow-hidden z-10 relative left-1/2 transform -translate-x-1/2">
-            <Image src={johanImg} alt="Johan" className="rounded-full object-cover" width={48} height={48} />
-          </div>
-          <div className="ml-20 w-1/2">
-            <h3 className="text-lg font-semibold text-yellow-500">
-              Principal Frontend Engineer
-            </h3>
-            <h4 className="text-md text-gray-400">Adevinta Spain</h4>
-            <p className="text-sm text-gray-500">Septiembre 2022</p>
-            <p className="text-sm text-gray-300 mt-2">
-              Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.
-            </p>
-          </div>
-        </div>
-
-        {/* Tercera experiencia */}
-        <div className="relative flex items-start mb-12 flex-row-reverse">
-          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-black-900 border-2 border-yellow-500 overflow-hidden z-10 relative left-1/2 transform -translate-x-1/2">
-            <Image src={johanImg} alt="Johan" className="rounded-full object-cover" width={48} height={48} />
-          </div>
-          <div className="mr-20 w-1/2 text-right">
-            <h3 className="text-lg font-semibold text-yellow-500">
-              Backend Developer
-            </h3>
-            <h4 className="text-md text-gray-400">Tech Company</h4>
-            <p className="text-sm text-gray-500">Junio 2021 - Agosto 2022</p>
-            <p className="text-sm text-gray-300 mt-2">
-              Desarrollo y mantenimiento de servicios backend utilizando Node.js y Express. Implementación de bases de datos y optimización de consultas para mejorar el rendimiento.
-            </p>
-          </div>
-        </div>
-
+        ))}
       </div>
     </div>
   );
