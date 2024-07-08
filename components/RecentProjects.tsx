@@ -1,7 +1,6 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
 
@@ -9,30 +8,30 @@ const RecentProjects = () => {
   return (
     <div className="py-20">
       <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        Filtra mis proyectos {" "}
+        <span className="text-purple">por tecnologías</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 mt-10 justify-center">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] group perspective-800 mx-auto"
             key={item.id}
           >
             <PinContainer
               title="/ui.aceternity.com"
               href="https://twitter.com/mannupaaji"
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10 transition-transform duration-500 group-hover:rotate-y-6">
                 <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                  className="relative w-full h-full overflow-hidden lg:rounded-3xl transform transition-transform duration-500 group-hover:rotate-y-6"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <img src="/bg.png" alt="bgimg" className="w-full h-full object-cover" />
                 </div>
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  className="z-10 absolute bottom-0 w-full h-full object-cover"
                 />
               </div>
 
@@ -81,3 +80,4 @@ const RecentProjects = () => {
 };
 
 export default RecentProjects;
+/* jj */
