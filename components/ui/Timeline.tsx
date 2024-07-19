@@ -1,69 +1,87 @@
-import React from 'react';
-import { HiOutlineOfficeBuilding } from "react-icons/hi";
-import { FaLaptopCode } from "react-icons/fa"; 
+import React from "react";
+import { Meteors } from "../ui/Meteors";
 
 const Timeline = () => {
   return (
-    <div className="relative px-4 md:px-10 lg:px-20 mt-12 bg-transparent text-white">
-      <div className="text-3xl font-semibold flex items-center justify-center mb-8 text-center flex-col">
-        <span>Experiencia</span>
-      </div>
-      <div className="relative flex flex-col items-center">
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-700"></div>
-
-        {/* Experience Item */}
-        {[
-          {
-            title: 'Desarrollador Full Stack',
-            company: 'Activos Digitales SAS',
-            date: '23/11/2023 - Actualmente',
-            description:
-              'Creación y consumo de APIs RESTful. Desarrollo de aplicaciones web con React, Node.js, Laravel y MySQL, despliegue de servidores, administración de VPS a través de ubuntu y uso de WordPress. Integración de Google Analytics y el píxel de Facebook mediante Google Tag Manager para el desarrollo de campañas con Google Ads y Facebook Ads...',
-            linkText: 'Saber más >',
-            linkHref: '#',
-            icon: <HiOutlineOfficeBuilding className="text-yellow-500 w-8 h-8 mb-2" />
-          },
-          {
-            title: 'Desarrollador Freelance',
-            date: '06/01/2021 - Actualmente',
-            description:
-              'Manejo de equipos colaborativos, incluyendo la subcontratación de personal especializado en diseño gráfico y fotografía para proyectos integrales, utilizando tecnologías como WordPress, HTML, CSS y JavaScript.',
-            linkText: 'Saber más >',
-            linkHref: '#',
-            icon: <FaLaptopCode className="text-yellow-500 w-8 h-8 mb-2" />
-          },
-      
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="relative flex items-center w-full max-w-3xl mb-12"
-          >
-            <div className="relative flex flex-col items-center w-full overflow-hidden rounded-lg p-[1px]">
-              <span className="absolute inset-0 animate-spin-slow bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
-              <div className="relative w-full bg-slate-950 rounded-lg p-6 flex flex-col items-center text-center">
-                {item.icon}
-                <div className="w-full">
-                  <h3 className="text-lg font-semibold text-yellow-500">
-                    {item.title}
-                  </h3>
-                  <h4 className="text-md text-gray-400">{item.company}</h4>
-                  <p className="text-sm text-gray-500">{item.date}</p>
-                </div>
-                <div className="w-full mt-4">
-                  <p className="text-sm text-gray-300">{item.description}</p>
-                  {item.linkText && (
-                    <a
-                      href={item.linkHref}
-                      className="text-yellow-500 hover:underline mt-2 inline-block"
-                    >
-                      {item.linkText}
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
+    <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-4 h-screen bg-gray-900 p-4">
+      <div className="relative w-full max-w-xs">
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] rounded-full blur-3xl" />
+        <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+          <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-2 w-2 text-gray-300"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
+              />
+            </svg>
           </div>
-        ))}
+
+          <h1 className="font-bold text-xl text-white mb-4 relative z-50">
+            Meteors because they&apos;re cool
+          </h1>
+
+          <div className="mb-4 relative z-50">
+            <p className="font-normal text-base text-slate-500">
+              I don&apos;t know what to write so I&apos;ll just paste something
+              cool here. One more sentence because lorem ipsum is just
+              unacceptable. Won&apos;t ChatGPT the shit out of this.
+            </p>
+          </div>
+
+          <button className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300">
+            Explore
+          </button>
+
+          <Meteors number={20} />
+        </div>
+      </div>
+
+      <div className="relative w-full max-w-xs">
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] rounded-full blur-3xl" />
+        <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+          <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-2 w-2 text-gray-300"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
+              />
+            </svg>
+          </div>
+
+          <h1 className="font-bold text-xl text-white mb-4 relative z-50">
+            Meteors because they&apos;re cool
+          </h1>
+
+          <div className="mb-4 relative z-50">
+            <p className="font-normal text-base text-slate-500">
+              I don&apos;t know what to write so I&apos;ll just paste something
+              cool here. One more sentence because lorem ipsum is just
+              unacceptable. Won&apos;t ChatGPT the shit out of this.
+            </p>
+          </div>
+
+          <button className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300">
+            Explore
+          </button>
+
+          <Meteors number={20} />
+        </div>
       </div>
     </div>
   );
