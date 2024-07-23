@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FaCopy } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
@@ -5,14 +7,15 @@ import MagicBadge from "./ui/MagicBadge";
 import { Spotlight } from "./ui/Spotlight";
 import { FlipWords } from "./ui/flip-words";
 import imgJohan from '../public/johan.jpg';
-
+import scrollFoto from '../public/scrollfoto.png';
+import { ContainerScroll } from '@/components/ui/container-scroll-animation';
+//JOHAN
 const Hero = () => {
   const phrases = [
-    "Más de 2 años de experiencia",
-    "Desarrollador full stack",
-    "Experto en React y Node",
-    "Apasionado por la tecnología",
-    "Innovador y creativo"
+    "SOFTWARE",
+    "PAGINAS WEB",
+    "ECOMMERCE",
+    "ANDROID APPS"
   ];
 
   return (
@@ -33,19 +36,32 @@ const Hero = () => {
             <img src={imgJohan.src} alt="Profile Image" className="rounded-full w-24 h-24" />
             <MagicBadge title="Curriculum" />
           </div>
-          <h1 className="text-white text-5xl font-bold mt-4">Soy Johan Riascos</h1>
+          <h1 className="text-white text-5xl font-bold mt-4">
+            Desarrollo de <FlipWords words={phrases} />
+          </h1>
           <p className="text-white mt-4">
+            Tecnologo en Desarrollo de Software egresado del SENA.
             <span className="text-yellow-500 font-bold">
-              
-            </span>
-            Tecnologo en Desarrollo de Software egresado del SENA. <FlipWords words={phrases} /> de Cucuta, Colombia. Especializado en el desarrollo full stack con React, Next, Node y bases de datos.
+              de Cucuta, Colombia.
+            </span>  
+            Especializado en el desarrollo full stack con React, Next, Node y bases de datos.
           </p>
-          <div className="mt-4">
-            <a href="#about">
-              <MagicButton title="ejohan7777@gmail.com" icon={<FaCopy />} position="right" />
-            </a>
-          </div>
+
+         
         </div>
+      </div>
+
+      {/* ContainerScroll Component */}
+      <div className="mt-5" style={{ marginTop: "-380px" }}> {/* Ajuste de margen superior */}
+        <ContainerScroll titleComponent={
+          <div className="text-center text-white">
+            <h2 className="text-xl md:text-2xl opacity-0">Unleash the power of</h2>
+
+    
+          </div>
+        }>
+          <img src={scrollFoto.src} alt="Scroll Animation Image" className="rounded-2xl w-full h-auto" />
+        </ContainerScroll>
       </div>
     </div>
   );

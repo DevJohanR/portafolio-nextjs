@@ -1,8 +1,6 @@
-// components/ui/flip-words.tsx
-
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
+import React, { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 export const FlipWords = ({
@@ -66,19 +64,24 @@ export const FlipWords = ({
         )}
         key={currentWord}
       >
-        {currentWord.split("").map((letter, index) => (
-          <motion.span
-            key={currentWord + index}
-            initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{
-              delay: index * 0.08,
-              duration: 0.4,
-            }}
-            className="inline-block"
-          >
-            {letter}
-          </motion.span>
+        {currentWord.split(" ").map((word, index) => (
+          <span key={index}>
+            {word.split("").map((letter, index) => (
+              <motion.span
+                key={letter + index}
+                initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{
+                  delay: index * 0.08,
+                  duration: 0.4,
+                }}
+                className="inline-block"
+              >
+                {letter}
+              </motion.span>
+            ))}
+            {index < currentWord.split(" ").length - 1 && " "}
+          </span>
         ))}
       </motion.div>
     </AnimatePresence>
