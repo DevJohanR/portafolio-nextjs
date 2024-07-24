@@ -1,15 +1,28 @@
 "use client";
 
 import React from "react";
-import { FaCopy } from "react-icons/fa6";
+import { FaBusinessTime, FaHandHoldingUsd, FaDigitalTachograph } from "react-icons/fa";
 import MagicButton from "./ui/MagicButton";
 import MagicBadge from "./ui/MagicBadge";
 import { Spotlight } from "./ui/Spotlight";
 import { FlipWords } from "./ui/flip-words";
 import imgJohan from '../public/johan.jpg';
-import scrollFoto from '../public/scrollfoto.png';
+import scrollFoto from '../public/heroJohan.webp';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
-//JOHAN
+import { motion } from "framer-motion";
+
+// Definir las animaciones
+const containerVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, staggerChildren: 0.1 } }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } }
+};
+
+// JOHAN
 const Hero = () => {
   const phrases = [
     "SOFTWARE",
@@ -19,7 +32,12 @@ const Hero = () => {
   ];
 
   return (
-    <div className="relative pb-20 pt-36">
+    <motion.div
+      className="relative pb-20 pt-36"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       <div>
         <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
         <Spotlight className="h-[80vh] w-[50vw] top-10 left-full" fill="purple" />
@@ -31,39 +49,64 @@ const Hero = () => {
       </div>
 
       <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center text-center">
+        <motion.div
+          className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center text-center"
+          variants={itemVariants}
+        >
           <div className="flex items-center space-x-4">
-            <img src={imgJohan.src} alt="Profile Image" className="rounded-full w-24 h-24" />
-            <MagicBadge title="Curriculum" />
+            <motion.img
+              src={imgJohan.src}
+              alt="Profile Image"
+              className="rounded-full w-24 h-24"
+              variants={itemVariants}
+            />
+            <motion.div variants={itemVariants}>
+              <MagicBadge title="Curriculum" />
+            </motion.div>
           </div>
-          <h1 className="text-white text-5xl font-bold mt-4">
+          <motion.h1 className="text-white text-5xl font-bold mt-4" variants={itemVariants}>
             Desarrollo de <FlipWords words={phrases} />
-          </h1>
-          <p className="text-white mt-4">
-            Tecnologo en Desarrollo de Software egresado del SENA.
-            <span className="text-yellow-500 font-bold">
-              de Cucuta, Colombia.
-            </span>  
-            Especializado en el desarrollo full stack con React, Next, Node y bases de datos.
-          </p>
-
-         
-        </div>
+          </motion.h1>
+          <motion.p className="text-white mt-4" variants={itemVariants}>
+            <span className="text-yellow-500 font-bold">+7 años de experiencia </span>creando soluciones personalizadas a empresas y negocios pequeños. <br /> ¡Hablemos! Contáctame para:
+          </motion.p>
+          <motion.ul className="mt-6 space-y-4 text-left" variants={itemVariants}>
+            <li className="flex items-center">
+              <FaBusinessTime className="text-yellow-500 w-6 h-6 mr-2" />
+              <span>Descubrir cómo puedo ayudarte a alcanzar tus objetivos de negocio</span>
+            </li>
+            <li className="flex items-center">
+              <FaHandHoldingUsd className="text-yellow-500 w-6 h-6 mr-2" />
+              <span>Obtener una consulta gratuita y personalizada</span>
+            </li>
+            <li className="flex items-center">
+              <FaDigitalTachograph className="text-yellow-500 w-6 h-6 mr-2" />
+              <span>Empezar a construir la solución digital que necesitas para destacarte en el mercado</span>
+            </li>
+          </motion.ul>
+        </motion.div>
       </div>
 
       {/* ContainerScroll Component */}
-      <div className="mt-5" style={{ marginTop: "-380px" }}> {/* Ajuste de margen superior */}
+      <motion.div
+        className="mt-5"
+        style={{ marginTop: "-380px" }}
+        variants={itemVariants}
+      >
         <ContainerScroll titleComponent={
           <div className="text-center text-white">
             <h2 className="text-xl md:text-2xl opacity-0">Unleash the power of</h2>
-
-    
           </div>
         }>
-          <img src={scrollFoto.src} alt="Scroll Animation Image" className="rounded-2xl w-full h-auto" />
+          <motion.img
+            src={scrollFoto.src}
+            alt="Scroll Animation Image"
+            className="rounded-2xl w-full h-auto"
+            variants={itemVariants}
+          />
         </ContainerScroll>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
