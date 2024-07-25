@@ -50,7 +50,7 @@ export const FlipWords = ({
   }, [isHidden, isMobile]);
 
   return (
-    <div className={isHidden ? "invisible h-10" : "h-10"}> {/* Ajuste aquí */}
+    <div className={isHidden ? "invisible h-10" : "h-10"}>
       <AnimatePresence
         onExitComplete={() => {
           if (isMobile) {
@@ -77,20 +77,20 @@ export const FlipWords = ({
           }}
           exit={{
             opacity: 0,
-            scale: isMobile ? 0.5 : 2, // Implosión en móvil
+            scale: isMobile ? 0.5 : 2,
             filter: isMobile ? "blur(0px)" : "blur(8px)",
-            y: isMobile ? 0 : -40, // Ajuste de la dirección de salida para móvil
-            x: isMobile ? 0 : 40,  // Ajuste de la dirección de salida para móvil
+            y: isMobile ? 0 : -40,
+            x: isMobile ? 0 : 40,
             position: "absolute",
           }}
           className={cn(
-            "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",
+            "z-10 inline-block relative text-left px-2",
             className
           )}
           key={currentWord}
         >
           {currentWord.split(" ").map((word, index) => (
-            <span key={index}>
+            <span key={index} className="text-yellow-500">
               {word.split("").map((letter, index) => (
                 <motion.span
                   key={letter + index}

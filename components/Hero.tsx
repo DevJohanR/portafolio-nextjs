@@ -1,9 +1,9 @@
 "use client";
-
+//johan
 import React from "react";
 import { FaBusinessTime, FaHandHoldingUsd, FaDigitalTachograph } from "react-icons/fa";
-import MagicButton from "./ui/MagicButton";
 import MagicBadge from "./ui/MagicBadge";
+import MagicBadgeCircle from "./ui/MagicBagdeCircle";
 import { Spotlight } from "./ui/Spotlight";
 import { FlipWords } from "./ui/flip-words";
 import imgJohan from '../public/johan.jpg';
@@ -65,26 +65,20 @@ const Hero = () => {
           <motion.h1 className="text-white text-5xl font-bold mt-4" variants={itemVariants}>
             Desarrollo de <FlipWords words={phrases} />
           </motion.h1>
-          <motion.p className="text-white mt-4 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300" variants={itemVariants}>
+          <motion.p className="text-white mt-4 text-xl dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300" variants={itemVariants}>
             <span className="text-yellow-500 font-bold">+7 años de experiencia </span> en mejora de procesos y automatizaciones. Desarrollo Full Stack especializado en tecnologias como Next.js ,Spring Boot, AWS; posicionamento SEO efectivo y software personalizado adaptado a tus necesidades, desde sistemas de gestion hasta aplicaciones moviles.<br /> ¡Hablemos! Contáctame para:
           </motion.p>
           <motion.ul className="mt-6 space-y-4 text-left" variants={itemVariants}>
             <li className="flex items-center bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300">
-              <div className="flex items-center justify-center w-10 h-10 bg-black rounded-full border border-white shadow-lg">
-                <FaBusinessTime className="text-white w-6 h-6" />
-              </div>
+              <MagicBadgeCircle icon={<FaBusinessTime className="text-white w-6 h-6" />} />
               <span className="text-white ml-3">Descubrir cómo puedo ayudarte a alcanzar tus objetivos</span>
             </li>
             <li className="flex items-center bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300">
-              <div className="flex items-center justify-center w-10 h-10 bg-black rounded-full border border-white shadow-lg">
-                <FaHandHoldingUsd className="text-white w-6 h-6" />
-              </div>
+              <MagicBadgeCircle icon={<FaHandHoldingUsd className="text-white w-6 h-6" />} />
               <span className="text-white ml-3">Obtener una consulta gratuita y personalizada</span>
             </li>
             <li className="flex items-center bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300">
-              <div className="flex items-center justify-center w-10 h-10 bg-black rounded-full border border-white shadow-lg">
-                <FaDigitalTachograph className="text-white w-6 h-6" />
-              </div>
+              <MagicBadgeCircle icon={<FaDigitalTachograph className="text-white w-6 h-6" />} />
               <span className="text-white ml-3">Desarrollar tu negocio digital</span>
             </li>
           </motion.ul>

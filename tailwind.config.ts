@@ -1,7 +1,5 @@
 import type { Config } from "tailwindcss";
-
 const svgToDataUri = require("mini-svg-data-uri");
-
 const colors = require("tailwindcss/colors");
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
@@ -25,6 +23,9 @@ const config: Config = {
     },
     extend: {
       colors: {
+        yellow: {
+          500: 'rgb(234 179 8 / <alpha-value>)', // Definir el color amarillo personalizado
+        },
         black: {
           DEFAULT: "#000",
           100: "#000319",
@@ -165,6 +166,12 @@ const config: Config = {
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      screens: {
+        'lg-plus': '1367px',
+      },
+      margin: {
+        '-top-custom': '0px', // Ajusta este valor según sea necesario
       },
     },
   },

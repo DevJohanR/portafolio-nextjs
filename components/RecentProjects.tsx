@@ -1,5 +1,5 @@
 "use client";
-
+//johan
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -8,39 +8,30 @@ const RecentProjects = () => {
   return (
     <div className="py-20">
       <h1 className="heading">
-        Filtra mis proyectos{" "}
-        <span className="text-purple">por tecnologías</span>
+        A small selection of{" "}
+        <span className="text-yellow-500">Software</span>
       </h1>
-      <div className="flex flex-wrap justify-center p-4 mt-10 gap-4">
-        <style jsx>{`
-          @media (min-width: 640px) {
-            .gap-adjustment {
-              margin-bottom: 100px; /* separacion vertical*/
-              margin-left: 20px; /* separacion horizontal*/
-              margin-right: 20px; /* separacion horizontal*/
-            }
-          }
-        `}</style>
+      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
           <div
-            className="flex flex-col items-center justify-center h-[30rem] sm:h-[25rem] sm:w-96 w-[75vw] lg:w-[35vw] mb-[65px] group perspective-800 gap-adjustment"
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
             <PinContainer
-              title="/sitioweb.aqui"
-              href="#"
+              title="/ui.aceternity.com"
+              href="https://twitter.com/mannupaaji"
             >
-              <div className="relative flex items-center justify-center sm:w-96 w-[75vw] lg:w-[35vw] overflow-hidden h-[55vh] sm:h-[20vh] lg:h-[45vh] transition-transform duration-500 group-hover:rotate-y-6 mb-4">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-auto mb-10">
                 <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl transform transition-transform duration-500 group-hover:rotate-y-6"
-                  style={{ backgroundColor: "#13162D" }}
+                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                  style={{ backgroundColor: "#13162D", opacity: 0 }}
                 >
                   <img src="/bg.png" alt="bgimg" className="w-full h-full object-cover" />
                 </div>
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0 w-full h-full object-cover lg:h-[45vh]"
+                  className="z-10 absolute bottom-0 w-full h-full object-cover rounded-lg"
                 />
               </div>
 
@@ -58,7 +49,7 @@ const RecentProjects = () => {
                 {item.des}
               </p>
 
-              <div className="flex items-center justify-between mt-4 mb-2">
+              <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
                     <div
@@ -74,10 +65,10 @@ const RecentProjects = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                  <p className="flex lg:text-xl md:text-xs text-sm text-yellow-500 font-bold">
                     Check Live Site
                   </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  <FaLocationArrow className="ms-3" color="rgb(234 179 8 / 1)" />
                 </div>
               </div>
             </PinContainer>

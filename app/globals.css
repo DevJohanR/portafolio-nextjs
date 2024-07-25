@@ -87,3 +87,10 @@
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
+
+/* Ejemplo de estilo de borde en MagicBadge */
+.magic-badge {
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Ejemplo de borde */
+  border-radius: 9999px; /* Ejemplo de borde redondeado */
+  padding: 0.5rem 1rem; /* Ejemplo de padding */
+}
