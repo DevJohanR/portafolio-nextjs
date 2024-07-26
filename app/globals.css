@@ -94,3 +94,11 @@
   border-radius: 9999px; /* Ejemplo de borde redondeado */
   padding: 0.5rem 1rem; /* Ejemplo de padding */
 }
+/* CSS personalizado */
+@media (max-width: 768px) {
+  .horizontal-image {
+    transform: rotate(90deg);
+    width: 100vh; /* Ajusta esto según tus necesidades */
+    height: auto;
+  }
+}

@@ -1,12 +1,12 @@
 "use client";
-//johan
+//johan3
 import React from "react";
 import { FaBusinessTime, FaHandHoldingUsd, FaDigitalTachograph } from "react-icons/fa";
 import MagicBadge from "./ui/MagicBadge";
 import MagicBadgeCircle from "./ui/MagicBagdeCircle";
 import { Spotlight } from "./ui/Spotlight";
 import { FlipWords } from "./ui/flip-words";
-import imgJohan from '../public/johan.jpg';
+import imgJohan from '../public/johan1.jpg';
 import scrollFoto from '../public/heroJohan.webp';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import { motion } from "framer-motion";
@@ -87,22 +87,26 @@ const Hero = () => {
 
       {/* ContainerScroll Component */}
       <motion.div
-        className="mt-5"
-        style={{ marginTop: "-380px" }}
+        className="mt-[-300px] md:mt-[-380px]"
+     
         variants={itemVariants}
       >
-        <ContainerScroll titleComponent={
-          <div className="text-center text-white">
-            <h2 className="text-xl md:text-2xl opacity-0">Unleash the power of</h2>
-          </div>
-        }>
-          <motion.img
-            src={scrollFoto.src}
-            alt="Scroll Animation Image"
-            className="rounded-2xl w-full h-auto"
-            variants={itemVariants}
-          />
-        </ContainerScroll>
+<ContainerScroll
+  titleComponent={
+    <div className="text-center text-white">
+      <h2 className="text-xl md:text-2xl opacity-0">Unleash the power of</h2>
+    </div>
+  }
+>
+  <motion.img
+    src={scrollFoto.src}
+    alt="Scroll Animation Image"
+    className="rounded-2xl w-full h-full object-cover md:object-center object-right"
+    variants={itemVariants}
+  />
+</ContainerScroll>
+
+
       </motion.div>
     </motion.div>
   );
