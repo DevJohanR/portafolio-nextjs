@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaCopy, FaCheck } from "react-icons/fa";
 
 /**
  *  UI: border magic from tailwind css btns
@@ -21,21 +22,34 @@ const MagicButton = ({
   handleClick?: () => void;
   otherClasses?: string;
 }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    if (handleClick) {
+      handleClick();
+    }
+    navigator.clipboard.writeText(title).then(() => {
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    });
+  };
+
   return (
     <button
-      className="relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none"
-      onClick={handleClick}
+      className="relative inline-flex h-12 w-auto md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none"
+      onClick={handleCopy}
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
-      {/* remove px-3 py-1, add px-5 gap-2 */}
       <span
-        className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg
+        className={`inline-flex h-full w-auto md:w-full cursor-pointer items-center justify-center rounded-lg
              bg-slate-950 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 ${otherClasses}`}
       >
-        {position === "left" && icon}
+        {position === "left" && (copied ? <FaCheck /> : icon)}
         {title}
-        {position === "right" && icon}
+        {position === "right" && (copied ? <FaCheck /> : icon)}
       </span>
     </button>
   );

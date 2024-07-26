@@ -1,7 +1,7 @@
 "use client";
 //johan3
 import React from "react";
-import { FaBusinessTime, FaHandHoldingUsd, FaDigitalTachograph } from "react-icons/fa";
+import { FaBusinessTime, FaHandHoldingUsd, FaDigitalTachograph, FaCopy } from "react-icons/fa";
 import MagicBadge from "./ui/MagicBadge";
 import MagicBadgeCircle from "./ui/MagicBagdeCircle";
 import { Spotlight } from "./ui/Spotlight";
@@ -10,6 +10,7 @@ import imgJohan from '../public/johan1.jpg';
 import scrollFoto from '../public/heroJohan.webp';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import { motion } from "framer-motion";
+import MagicButton from "@/components/ui/MagicButton";
 
 // Definir las animaciones
 const containerVariants = {
@@ -65,9 +66,17 @@ const Hero = () => {
           <motion.h1 className="text-white text-5xl font-bold mt-4" variants={itemVariants}>
             Desarrollo de <FlipWords words={phrases} />
           </motion.h1>
-          <motion.p className="text-white mt-4 text-xl dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300" variants={itemVariants}>
-            <span className="text-yellow-500 font-bold">+7 años de experiencia </span> en mejora de procesos y automatizaciones. Desarrollo Full Stack especializado en tecnologias como Next.js ,Spring Boot, AWS; posicionamento SEO efectivo y software personalizado adaptado a tus necesidades, desde sistemas de gestion hasta aplicaciones moviles.<br /> ¡Hablemos! Contáctame para:
-          </motion.p>
+          <motion.p 
+  className="text-white mt-4 text-xl dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 flex flex-col items-center text-center space-y-4" 
+  variants={itemVariants}
+>
+  <span className="text-yellow-500 font-bold">+7 años de experiencia </span> 
+  <span>en mejora de procesos y automatizaciones. Desarrollo Full Stack especializado en tecnologías como Next.js, Spring Boot, AWS; posicionamiento SEO efectivo y software personalizado adaptado a tus necesidades, desde sistemas de gestión hasta aplicaciones móviles.</span>
+  <MagicButton title="ejohan7777@gmail.com" icon={<FaCopy />} position="left" /> 
+  <span>¡Hablemos! Contáctame para:</span> 
+</motion.p>
+
+
           <motion.ul className="mt-6 space-y-4 text-left" variants={itemVariants}>
             <li className="flex items-center bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300">
               <MagicBadgeCircle icon={<FaBusinessTime className="text-white w-6 h-6" />} />
@@ -82,6 +91,8 @@ const Hero = () => {
               <span className="text-white ml-3">Desarrollar tu negocio digital</span>
             </li>
           </motion.ul>
+
+          
         </motion.div>
       </div>
 
