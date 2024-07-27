@@ -71,7 +71,7 @@ const Hero = () => {
   variants={itemVariants}
 >
   <span className="text-yellow-500 font-bold">+7 años de experiencia </span> 
-  <span>en mejora de procesos y automatizaciones. Desarrollo Full Stack especializado en tecnologías como Next.js, Spring Boot, AWS; posicionamiento SEO efectivo y software personalizado adaptado a tus necesidades, desde sistemas de gestión hasta aplicaciones móviles.</span>
+  <span>en mejora de procesos y automatizaciones. Desarrollo Full Stack especializado en tecnologías como Next.js, Spring Boot, Laravel, SQL, AWS; posicionamiento SEO efectivo y software personalizado adaptado a tus necesidades, desde sistemas de gestión hasta aplicaciones móviles.</span>
   <MagicButton title="ejohan7777@gmail.com" icon={<FaCopy />} position="left" /> 
   <span>¡Hablemos! Contáctame para:</span> 
 </motion.p>

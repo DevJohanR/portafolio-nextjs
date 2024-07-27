@@ -22,6 +22,7 @@ const config: Config = {
       },
     },
     extend: {
+      
       colors: {
         yellow: {
           500: 'rgb(234 179 8 / <alpha-value>)', // Definir el color amarillo personalizado
@@ -168,10 +169,10 @@ const config: Config = {
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       screens: {
-        'lg-plus': '1367px',
+        'lg-plus': '1367px', //customize Johan
       },
       margin: {
-        '-top-custom': '0px', // Ajusta este valor según sea necesario
+        '-top-custom': '0px',  //customize Johan
       },
     },
   },

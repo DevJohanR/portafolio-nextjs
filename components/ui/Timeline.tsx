@@ -33,12 +33,26 @@ const Timeline: React.FC = () => {
   }, []);
 
   return (
-    <div className={`p-4 flex flex-col items-center ${isMobile ? 'h-auto' : 'h-screen lg:h-auto lg:py-12'}`}>
-      <div className="mb-6">
-        <h1 className="heading text-2xl md:text-4xl font-bold text-center">
-          A small selection of{" "}
-          <span className="text-yellow-500">Software</span>
+    <div className={`p-4 flex flex-col items-center lg-plus:pr-20 lg-plus:pl-20 ${isMobile ? 'h-auto' : 'h-screen lg:h-auto lg:py-12'}`}>
+         <div className="mb-6">
+        <h1 className="heading font-bold text-center p-14">
+    Transformando tu negocio{" "}
+          <span className="text-yellow-500">con tecnología</span>
         </h1>
+        <div className="max-w-screen-lg mx-auto p-4">
+      <p className="text-white mt-4 text-lg md:text-xl dark:text-gray-300 space-y-4 text-center leading-relaxed">
+        Actualmente trabajo como Desarrollador full stack en la empresa Activos Digitales SAS, donde aplico mis habilidades en Node.js, MongoDB, SQL, Next.js, React.js, React Native y PHP/Laravel. 
+        Además, gestiono campañas en Google Ads y Meta Ads, y utilizo Figma para el diseño UX/UI. Mi metodología de trabajo se basa en Scrum, garantizando proyectos eficientes y de alta calidad. 
+        <strong className="text-yellow-500 dark:text-yellow-200 font-semibold block mt-4">
+          Ya sea que seas un reclutador en busca del mejor talento o un empresario que necesita servicios tecnológicos avanzados,
+        </strong> 
+        puedes estar seguro de que
+        <span className="text-yellow-500 font-bold"> cuento con la experiencia </span>
+        y las habilidades necesarias 
+        <span className="text-yellow-500 font-bold"> para llevar tu proyecto al siguiente nivel. </span> 
+       
+      </p>
+    </div>
       </div>
       <div className="flex flex-wrap justify-center">
         {tasks.map((task, index) => (
