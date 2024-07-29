@@ -1,15 +1,30 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import MagicButton from "@/components/ui/MagicButton";
 
 const socialMedia = [
-  { id: 1, name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com" },
-  { id: 2, name: "GitHub", icon: <FaGithub />, link: "https://github.com" },
+  { id: 1, name: "LinkedIn", icon: <FaLinkedin />, link: "https://www.linkedin.com/in/ejohan7777/" },
+  { id: 2, name: "GitHub", icon: <FaGithub />, link: "https://github.com/DevJohanR" },
 ];
 
 const Footer = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <footer className="w-full pt-20 pb-10 relative" id="contact">
       {/* background grid */}
@@ -23,17 +38,17 @@ const Footer = () => {
 
       <div className="flex flex-col items-center px-4">
         <h1 className="heading lg:max-w-[45vw] text-center text-2xl md:text-3xl lg:text-4xl">
-          ¿Listo para llevar tu <span className="text-purple">presencia digital</span> al siguiente nivel?
+          ¿Listo para llevar tu <span className="text-yellow-500">evolución digital</span> al siguiente nivel?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
           Contáctame hoy y discutamos cómo puedo ayudarte a alcanzar tus objetivos.
         </p>
         <a href="https://wa.link/bl2g07" target="_blank" rel="noopener noreferrer">
           <MagicButton
-            title="Pongámonos en contacto"
-            icon={<FaWhatsapp />}
+            title="+57 3027777134"
+            icon={isMobile ? <FaWhatsapp /> : null}
             position="right"
-            otherClasses="text-center py-3 px-6 rounded-lg text-white flex items-center justify-center whitespace-nowrap"
+            otherClasses="text-center py-3 px-6 rounded-lg text-white flex items-center justify-center whitespace-nowrap font"
           />
         </a>
       </div>

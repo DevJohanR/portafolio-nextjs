@@ -3,7 +3,7 @@ import Hero from '@/components/Hero';
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { FaHome, FaUser } from "react-icons/fa";
-import Timeline from "@/components/ui/Timeline"; // Importamos el componente Timeline
+import Timeline from "@/components/ui/Timeline"; 
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -21,10 +21,10 @@ export default function Home() {
           <RecentProjects />
         </section>
         <section id="about">
-          <Timeline /> {/* Añadimos el componente Timeline aquí */}
+          <Timeline /> 
         </section>
         <section id="footer">
-          <Footer /> {/* Añadimos el componente Timeline aquí */}
+          <Footer /> 
         </section>
       </div>
     </main>

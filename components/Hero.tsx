@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
             className="text-white mt-4 text-xl dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 flex flex-col items-center text-center space-y-4" 
             variants={itemVariants}
           >
-            <span className="text-yellow-500 font-bold">+7 años de experiencia </span> 
+            <span className="text-yellow-500 font-bold">+2 años de experiencia </span> 
             <span>En mejora de procesos y automatizaciones. Desarrollo Full Stack especializado en tecnologías como Next.js, React Native, Spring Boot, Laravel, SQL, AWS; posicionamiento SEO efectivo y software personalizado adaptado a tus necesidades, desde sistemas de gestión hasta aplicaciones móviles.</span>
             <MagicButton title="ejohan7777@gmail.com" icon={<FaCopy />} position="left" /> 
             <span>¡Hablemos! Contáctame para:</span> 
