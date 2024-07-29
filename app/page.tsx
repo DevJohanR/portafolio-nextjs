@@ -4,6 +4,7 @@ import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { FaHome, FaUser } from "react-icons/fa";
 import Timeline from "@/components/ui/Timeline"; // Importamos el componente Timeline
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
         </section>
         <section id="about">
           <Timeline /> {/* Añadimos el componente Timeline aquí */}
+        </section>
+        <section id="footer">
+          <Footer /> {/* Añadimos el componente Timeline aquí */}
         </section>
       </div>
     </main>

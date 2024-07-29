@@ -23,12 +23,21 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.3 } }
 };
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const phrases = [
     "SOFTWARE",
     "SITIOS WEB",
     "ANDROID"
   ];
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/test.pdf'; // Asegúrate de que el archivo PDF esté en la carpeta public
+    link.download = 'Curriculum_Johan.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <motion.div
@@ -59,23 +68,23 @@ const Hero = () => {
               className="rounded-full w-24 h-24"
               variants={itemVariants}
             />
-            <motion.div variants={itemVariants}>
-              <MagicBadge title="Curriculum" />
-            </motion.div>
+        <motion.div variants={itemVariants} className="cursor-pointer">
+  <MagicBadge title="Curriculum" onClick={handleDownload} />
+</motion.div>
+
           </div>
           <motion.h1 className="text-white text-5xl font-bold mt-4" variants={itemVariants}>
             Desarrollo de <FlipWords words={phrases} />
           </motion.h1>
           <motion.p 
-  className="text-white mt-4 text-xl dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 flex flex-col items-center text-center space-y-4" 
-  variants={itemVariants}
->
-  <span className="text-yellow-500 font-bold">+7 años de experiencia </span> 
-  <span>en mejora de procesos y automatizaciones. Desarrollo Full Stack especializado en tecnologías como Next.js, Spring Boot, Laravel, SQL, AWS; posicionamiento SEO efectivo y software personalizado adaptado a tus necesidades, desde sistemas de gestión hasta aplicaciones móviles.</span>
-  <MagicButton title="ejohan7777@gmail.com" icon={<FaCopy />} position="left" /> 
-  <span>¡Hablemos! Contáctame para:</span> 
-</motion.p>
-
+            className="text-white mt-4 text-xl dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 flex flex-col items-center text-center space-y-4" 
+            variants={itemVariants}
+          >
+            <span className="text-yellow-500 font-bold">+7 años de experiencia </span> 
+            <span>En mejora de procesos y automatizaciones. Desarrollo Full Stack especializado en tecnologías como Next.js, React Native, Spring Boot, Laravel, SQL, AWS; posicionamiento SEO efectivo y software personalizado adaptado a tus necesidades, desde sistemas de gestión hasta aplicaciones móviles.</span>
+            <MagicButton title="ejohan7777@gmail.com" icon={<FaCopy />} position="left" /> 
+            <span>¡Hablemos! Contáctame para:</span> 
+          </motion.p>
 
           <motion.ul className="mt-6 space-y-4 text-left" variants={itemVariants}>
             <li className="flex items-center bg-gray-800 p-4 rounded-lg shadow-md hover:bg-gray-700 transition-all duration-300">
@@ -91,7 +100,6 @@ const Hero = () => {
               <span className="text-white ml-3">Desarrollar tu negocio digital</span>
             </li>
           </motion.ul>
-
           
         </motion.div>
       </div>
@@ -99,25 +107,22 @@ const Hero = () => {
       {/* ContainerScroll Component */}
       <motion.div
         className="mt-[-300px] md:mt-[-380px]"
-     
         variants={itemVariants}
       >
-<ContainerScroll
-  titleComponent={
-    <div className="text-center text-white">
-      <h2 className="text-xl md:text-2xl opacity-0">Unleash the power of</h2>
-    </div>
-  }
->
-  <motion.img
-    src={scrollFoto.src}
-    alt="Scroll Animation Image"
-    className="rounded-2xl w-full h-full object-cover md:object-center object-right"
-    variants={itemVariants}
-  />
-</ContainerScroll>
-
-
+        <ContainerScroll
+          titleComponent={
+            <div className="text-center text-white">
+              <h2 className="text-xl md:text-2xl opacity-0">Unleash the power of</h2>
+            </div>
+          }
+        >
+          <motion.img
+            src={scrollFoto.src}
+            alt="Scroll Animation Image"
+            className="rounded-2xl w-full h-full object-cover md:object-center object-right"
+            variants={itemVariants}
+          />
+        </ContainerScroll>
       </motion.div>
     </motion.div>
   );
