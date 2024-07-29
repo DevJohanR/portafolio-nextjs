@@ -5,13 +5,39 @@ import { Meteors } from "../ui/Meteors";
 
 const Timeline: React.FC = () => {
   const tasks = [
-    { title: "Página Web", icon: "globe" },
-    { title: "App Mobile", icon: "mobile" },
-    { title: "Marketing Digital", icon: "megaphone" },
-    { title: "Tienda Virtual", icon: "shopping-cart" },
-    { title: "Software Personalizado", icon: "camera" },
-    { title: "Creación de Contenido", icon: "camera" },
+    { 
+      title: "Página Web", 
+      icon: "globe", 
+      description: "Muestra tu negocio en línea 24/7, integra chats, encuestas, análisis de tráfico, detalla tus servicios, horarios y convierte visitantes en clientes satisfechos." 
+    },
+    { 
+      title: "App Mobile", 
+      icon: "mobile", 
+      description: "Lleva tu negocio al siguiente nivel con aplicaciones móviles personalizadas. Optimiza la experiencia del usuario y fortalece la lealtad del cliente." 
+    },
+    { 
+      title: "Marketing Digital", 
+      icon: "megaphone", 
+      description: "Asegúrate de que tu negocio sea el primero en Google y en redes sociales mediante campañas publicitarias efectivas en Google Ads y Meta Ads." 
+    },
+    { 
+      title: "Tienda Virtual", 
+      icon: "shopping-cart", 
+      description: "Comercio electrónico seguro: acepta pagos, gestiona inventarios y pedidos, y optimiza tu SEO y estrategias de marketing de manera efectiva." 
+    },
+    { 
+      title: "Software Personalizado", 
+      icon: "camera", 
+      description: "Administra tu negocio desde cualquier dispositivo; gestiona inventarios, clientes y pedidos, y recibe alertas en tiempo real para mantenerte al tanto." 
+    },
+    { 
+      title: "Creación de Contenido", 
+      icon: "camera", 
+      description: "Impulsa tu presencia online con catálogos, videos, contenido para redes, blogs, fotos profesionales e infografías que enganchen y expandan tu alcance." 
+    },
+    // Añade más tareas según lo necesites
   ];
+  
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -82,7 +108,7 @@ const Timeline: React.FC = () => {
 
               <div className="mb-4 relative z-50">
                 <p className="font-normal text-base text-slate-500">
-                  I don&apos;t know what to write so I&apos;ll just paste something cool here. One more sentence because lorem ipsum is just unacceptable. Won&apos;t ChatGPT the shit out of this.
+                  {task.description}
                 </p>
               </div>
 
