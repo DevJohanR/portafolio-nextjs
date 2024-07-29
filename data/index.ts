@@ -5,6 +5,15 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
+
+export const urls = [
+  "https://finanzasenlaluna.blog",
+  "https://tokenautas.com",
+  "https://lunacoworking.co",
+  "https://activosdigitales.com.co",
+];
+
+
 export const gridItems = [
   {
     id: 1,
@@ -72,37 +81,38 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Space Models",
-    des: "Profesionalizar chicas interesadas en trabajar como modelos webcam en el sector del entretenimiento adulto.",
-    img: "/spacemodels.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/spacemodels.pro",
+    title: "Blog de Noticias",
+    des: "Dedicado a ofrecer noticias y análisis detallados sobre criptomonedas y finanzas.",
+    img: "/finanzasluna.jpg",
+    iconLists: ["/re.svg", "/css.png", "/mongo.png", "/node.png", "/javascript.png"],
+    link: "https://finanzasenlaluna.blog",
   },
   {
     id: 2,
     title: "Tokenautas",
     des: "Las modelos tienen la opción de vender sus tokens o recibir regalos en criptomonedas.",
     img: "/paneltokenautas1.jpg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/tokenautas.com",
+    iconLists: ["/re.svg", "/tail.svg", "/node.png", "/mysql3.png", "/javascript.png"],
+    link: "https://tokenautas.com",
   },
   {
     id: 3,
     title: "Luna Coworking",
     des: "Plataforma para conocer las oficinas disponibles e informar sobre los beneficios de los entornos adaptados para coworking.",
     img: "/lunacoworking.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/lunacoworking.co",
+    iconLists: ["/re.svg", "/css.png", "/javascript.png", "/googleads.png", "/googleanalitycs.png"],
+    link: "https://lunacoworking.co",
   },
   {
     id: 4,
     title: "Activos Digitales",
     des: "KYC seguro, almacenamiento en AWS y gestión de datos de clientes en bases de datos.",
     img: "/activosdigitales.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/activosdigitales.com.co",
+    iconLists: ["/re.svg", "/css.png", "/node.png", "/mysql3.png", "/aws3.png"],
+    link: "https://activosdigitales.com.co",
   },
 ];
+
 
 export const testimonials = [
   {

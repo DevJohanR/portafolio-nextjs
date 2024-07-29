@@ -10,8 +10,8 @@ import { cn } from "@/utils/cn";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const socialMedia = [
-  { id: 1, name: "LinkedIn", icon: <FaLinkedin />, link: "https://linkedin.com" },
-  { id: 2, name: "GitHub", icon: <FaGithub />, link: "https://github.com" },
+  { id: 1, name: "LinkedIn", icon: <FaLinkedin />, link: "https://www.linkedin.com/in/ejohan7777/" },
+  { id: 2, name: "GitHub", icon: <FaGithub />, link: "https://github.com/DevJohanR" },
 ];
 
 export const FloatingNav = ({
