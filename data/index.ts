@@ -72,8 +72,8 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Agencia Space Models",
-    des: "Especialistas en empoderar y profesionalizar modelos para entretenimiento adulto.",
+    title: "Space Models",
+    des: "Profesionalizar chicas interesadas en trabajar como modelos webcam en el sector del entretenimiento adulto.",
     img: "/spacemodels.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "/spacemodels.pro",
@@ -81,15 +81,15 @@ export const projects = [
   {
     id: 2,
     title: "Tokenautas",
-    des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do consectetur adip.",
-    img: "/tokenautas.png",
+    des: "Las modelos tienen la opción de vender sus tokens o recibir regalos en criptomonedas.",
+    img: "/paneltokenautas1.jpg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "/tokenautas.com",
   },
   {
     id: 3,
     title: "Luna Coworking",
-    des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do consectetur adip.",
+    des: "Plataforma para conocer las oficinas disponibles e informar sobre los beneficios de los entornos adaptados para coworking.",
     img: "/lunacoworking.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "/lunacoworking.co",
@@ -97,7 +97,7 @@ export const projects = [
   {
     id: 4,
     title: "Activos Digitales",
-    des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do consectetur adip.",
+    des: "KYC seguro, almacenamiento en AWS y gestión de datos de clientes en bases de datos.",
     img: "/activosdigitales.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/activosdigitales.com.co",
