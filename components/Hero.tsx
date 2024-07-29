@@ -32,8 +32,8 @@ const Hero: React.FC = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/test.pdf'; // Asegúrate de que el archivo PDF esté en la carpeta public
-    link.download = 'Curriculum_Johan.pdf';
+    link.href = '/Curriculum-Johan-Riascos.pdf'; 
+    link.download = 'Curriculum-Johan-Riascos.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -112,7 +112,7 @@ const Hero: React.FC = () => {
         <ContainerScroll
           titleComponent={
             <div className="text-center text-white">
-              <h2 className="text-xl md:text-2xl opacity-0">Unleash the power of</h2>
+              <h2 className="text-xl md:text-2xl opacity-0">Software a medida</h2>
             </div>
           }
         >
