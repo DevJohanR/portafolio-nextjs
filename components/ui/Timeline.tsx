@@ -70,7 +70,7 @@ const Timeline: React.FC = () => {
        
         <div className="max-w-screen-lg mx-auto p-4 text-center">
           <div className="text-white mt-4 text-lg md:text-xl dark:text-gray-300 space-y-4 leading-relaxed">
-          <p>Trabajo para la empresa <a href="https://activosdigitales.com.co"><em>Activos Digitales SAS</em></a>. Combino mis habilidades en <strong>frontend y backend</strong> para integrar microservicios, gestionar estados con Redux o Context API, y administrar tokens de acceso. Desarrollo y consumo APIs RESTful, diseño bases de datos utilizando ORMs. Además, aplico patrones de diseño para abstraer la lógica de acceso a datos y mejorar la mantenibilidad del código.</p>
+          <p>Trabajo para la empresa <a href="https://activosdigitales.com.co"><em>Activos Digitales</em></a>. Combino mis habilidades en <strong>frontend y backend</strong> para integrar microservicios, gestionar estados con Redux o Context API, y administrar tokens de acceso. Desarrollo y consumo APIs RESTful, diseño bases de datos utilizando ORMs. Además, aplico patrones de diseño para abstraer la lógica de acceso a datos y mejorar la mantenibilidad del código.</p>
 
             <p>También, gestiono campañas en Google Ads y Meta Ads, y utilizo Figma para el diseño UX/UI. Implemento metodologías ágiles con Scrum y diagramas para levantar requisitos y contextualizar funcionalidades</p>
             <p><strong className="text-yellow-500 dark:text-yellow-200 font-semibold block mt-4">Ya sea que seas un reclutador en busca del mejor talento o un empresario que necesita servicios tecnológicos avanzados,</strong></p>
