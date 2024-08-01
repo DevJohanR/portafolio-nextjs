@@ -17,9 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/jsm-logo.png" sizes="any" />
+        <link rel="icon" href="/johan1.jpg" sizes="any" />
+        <meta property="og:title" content="Portafolio: Johan Riascos" />
+        <meta property="og:description" content="Desarrollador de Software egresado del SENA" />
+        <meta property="og:image" content="https://www.johanriascos.site/johan1.jpg" />
+        <meta property="og:url" content="https://www.johanriascos.site/" />
+        <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body className={inter.className}>
         <ThemeProvider
